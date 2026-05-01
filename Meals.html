@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوجبات - مطعم الاصدقاء</title>
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <div class="nav-brand">🍽️ مطعم <span>الاصدقاء</span></div>
+    <ul>
+        <li><a href="home.html">الرئيسية</a></li>
+        <li><a href="AboutUs.html">من نحن</a></li>
+        <li><a href="Meals.html" class="active">الوجبات</a></li>
+    </ul>
+</nav>
+
+<div class="hero">
+    <h1>قائمة الوجبات السريعة</h1>
+    <p>اختر ما تشاء فنحن الافضل</p>
+</div>
+
+<main>
+
+    <div class="card fade-in">
+        <h2>🍽️ الوجبات المتاحة</h2>
+        <p style="margin-bottom:1rem; color:var(--text-light);">اضغط على زر "عرض" للاطلاع على تفاصيل الوجبة، ثم ضع علامة في خانة "اختيار" للطلب.</p>
+
+        <table id="mealsTable">
+            <thead>
+                <tr>
+                    <th>الرمز</th>
+                    <th>الصورة</th>
+                    <th>الوجبة</th>
+                    <th>السعر</th>
+                    <th>إظهار التفاصيل</th>
+                    <th>اختيار</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- FF-001 -->
+                <tr class="meal-row">
+                    <td><strong>FF-001</strong></td>
+                    <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=140&q=80"></td>
+                    <td>برغر اللحم الفاخر</td>
+                    <td>95,000 ل.س</td>
+                    <td><button onclick="toggleDetail('FF-001')">عرض ▼</button></td>
+                    <td><input type="checkbox" class="meal-check" data-id="FF-001" data-name="برغر اللحم الفاخر" data-price="95000"></td>
+                </tr>
+                <tr class="detail-row" id="detail-FF-001">
+                    <td colspan="6">
+                    <div class="detail-content">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=360&q=80">
+                    <div class="detail-text">
+                    <h4>وجبة دسمة ومشبعة</h4>
+                <ul>
+                    <li>لحم بقري طازج مشوي على الفحم</li>
+                     <li>جبنة شيدر ذائبة</li>
+                    <li>صوص خاص + خس + طماطم</li>
+                    <li>خبز برغر طري ومحمص</li>
+                </ul>
+                    </div>
+                    </div>
+                    </td>
+                </tr>
+
+                <!-- FF-002 -->
+                 <tr class="meal-row">
+                    <td><strong>FF-002</strong></td>
+                    <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=140&q=80"></td>
+
+                    <td>شاورما الدجاج الملكية</td>
+
+                    <td>75,000 ل.س</td>
+
+                    <td><button onclick="toggleDetail('FF-002')">عرض ▼</button></td>
+
+                    <td><input type="checkbox" class="meal-check" data-id="FF-002" data-name="شاورما الدجاج الملكية" data-price="75000"></td>
+
+                </tr>
+
+                <tr class="detail-row" id="detail-FF-002">
+
+                    <td colspan="6">
+
+                        <div class="detail-content">
+
+                            <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=360&q=80">
+
+
+                            <div class="detail-text">
+
+                                <ul>
+
+                                    <li>دجاج متبل بخلطة سرية</li>
+
+                                    <li>ثوم كريمي + مخلل</li>
+
+                                    <li>خبز عربي طازج</li>
+
+                                </ul>
+
+                            </div>
+
+
+
+                        </div>
+
+                    </td>
+
+                </tr>
+
+
+                <!-- FF-003 -->
+
+                <tr class="meal-row">
+
+                    <td><strong>FF-003</strong></td>
+
+                    <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=140&q=80"></td>
+
+                    <td>بيتزا إيطالية ساخنة</td>
+
+                    <td>110,000 ل.س</td>
+
+
+                    <td><button onclick="toggleDetail('FF-003')">عرض ▼</button></td>
+
+
+                    <td><input type="checkbox" class="meal-check" data-id="FF-003" data-name="بيتزا إيطالية" data-price="110000"></td>
+
+
+                </tr>
+
+
+                <!-- FF-004 -->
+
+                <tr class="meal-row">
+
+                    <td><strong>FF-004</strong></td>
+
+                    <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=140&q=80"></td>
+
+                    <td>دجاج مشوي متبل</td>
+
+                    <td>90,000 ل.س</td>
+
+
+                    <td><button onclick="toggleDetail('FF-004')">عرض ▼</button></td>
+
+
+                    <td><input type="checkbox" class="meal-check" data-id="FF-004" data-name="دجاج مشوي" data-price="90000"></td>
+
+
+                </tr>
+
+
+                <!-- FF-005 -->
+
+                <tr class="meal-row">
+
+                    <td><strong>FF-005</strong></td>
+
+                    <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=140&q=80"></td>
+
+                    <td>ناغتس ذهبية مقرمشة</td>
+
+                    <td>65,000 ل.س</td>
+
+                    <td><button onclick="toggleDetail('FF-005')">عرض ▼</button></td>
+
+                    <td><input type="checkbox" class="meal-check" data-id="FF-005" data-name="ناغتس" data-price="65000"></td>
+
+                </tr>
+
+
+                <!-- FF-006 -->
+
+                <tr class="meal-row">
+
+                    <td><strong>FF-006</strong></td>
+
+                    <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=140&q=80"></td>
+
+                    <td>بطاطا مقلية مقرمشة</td>
+
+                    <td>30,000 ل.س</td>
+
+                    <td><button onclick="toggleDetail('FF-006')">عرض ▼</button></td>
+
+                    <td><input type="checkbox" class="meal-check" data-id="FF-006" data-name="بطاطا" data-price="30000"></td>
+                </tr>
+                <!-- FF-007 -->
+                <tr class="meal-row">
+                    <td><strong>FF-007</strong></td>
+                    <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=140&q=80"></td>
+                    <td>ستيك لحم فاخر</td>
+                    <td>160,000 ل.س</td>
+                    <td><button onclick="toggleDetail('FF-007')">عرض ▼</button></td>
+                    <td><input type="checkbox" class="meal-check" data-id="FF-007" data-name="ستيك" data-price="160000"></td>
+                </tr>
+                <!-- FF-008 -->
+                <tr class="meal-row">
+                    <td><strong>FF-008</strong></td>
+                    <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=140&q=80"></td>
+                    <td>سلطة فريش صحية</td>
+                    <td>35,000 ل.س</td>
+                    <td><button onclick="toggleDetail('FF-008')">عرض ▼</button></td>
+                    <td><input type="checkbox" class="meal-check" data-id="FF-008" data-name="سلطة" data-price="35000"></td>
+                </tr>
+                [30/04/26 01:28 ص] Leoon: <!-- FF-009 -->
+                <tr class="meal-row">
+                    <td><strong>FF-009</strong></td>
+                    <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=140&q=80"></td>
+                    <td>برغر دجاج كرسبي</td>
+                    <td>85,000 ل.س</td>
+                    <td><button onclick="toggleDetail('FF-009')">عرض ▼</button></td>
+                    <td><input type="checkbox" class="meal-check" data-id="FF-009" data-name="برغر دجاج" data-price="85000"></td>
+                </tr>
+                <!-- FF-010 -->
+                <tr class="meal-row">
+                    <td><strong>FF-010</strong></td>
+                    <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1598514983318-2f64f8f4796c?w=140&q=80"></td>
+                    <td>توست جبنة ذائبة</td>
+                    <td>45,000 ل.س</td>
+                    <td><button onclick="toggleDetail('FF-010')">عرض ▼</button></td>
+                    <td>
+                        <input type="checkbox"
+                        class="meal-check"
+                        data-id="FF-010"
+                         data-name="توست جبنة ذائبة"
+                        data-price="45000">
+                        </td>  
+                    </tbody>
+                </table>
+                <div class="text-center mt-2">
+                    <button class="btn btn-primary" id="btnContinue" onclick="showOrderForm()">متابعة ←</button>
+                </div>
+            </div>
+                        <!-- ORDER FORM-->
+                        <div id="orderForm">
+        <h3>📋 نموذج الطلب</h3>
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label for="fullName">الاسم الكامل</label>
+                <input type="text" id="fullName" placeholder="أدخل الاسم بالعربية فقط">
+                <div class="error-msg" id="err-fullName">الاسم يجب أن يحتوي على أحرف عربية فقط</div>
+            </div>
+
+            <div class="form-group">
+                <label for="nationalId">الرقم الوطني <span class="required">*</span></label>
+                <input type="text" id="nationalId" placeholder="أدخل رقمك الوطني (11 خانة)" maxlength="11">
+                <div class="error-msg" id="err-nationalId">الرقم الوطني يجب أن يكون 11 خانة، وأول خانتين من 01 إلى 14</div>
+            </div>
+
+            <div class="form-group">
+                <label for="birthDate">تاريخ الميلاد</label>
+                <input type="date" id="birthDate">
+                <div class="error-msg" id="err-birthDate">يرجى إدخال تاريخ ميلاد صحيح</div>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">رقم الموبايل</label>
+                <input type="text" id="mobile" placeholder="09xxxxxxxx" maxlength="10">
+                <div class="error-msg" id="err-mobile">يجب أن يتبع شبكة Syriatel (093,098,099) أو MTN (094,095,096)</div>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" placeholder="example@email.com">
+                <div class="error-msg" id="err-email">يرجى إدخال بريد إلكتروني صحيح</div>
+            </div>
+
+        </div>
+
+        <hr class="separator">
+
+        <div class="text-center">
+            <button class="btn btn-success" onclick="submitOrder()">إرسال الطلب ✓</button>
+            &nbsp;
+            <button class="btn btn-secondary" onclick="cancelOrder()">إلغاء</button>
+        </div>
+    </div>
+
+</main>
+
+<!-- RESULT MODAL -->
+<div class="modal-overlay" id="resultModal">
+    <div class="modal-box">
+        <h3>✅ تفاصيل طلبك</h3>
+        <div id="modalContent"></div>
+        <button class="btn btn-primary modal-close" onclick="closeModal()">إغلاق</button>
+    </div>
+</div>
+
+<footer>
+    <p>جميع الحقوق محفوظة &copy; 2026 | <span>مطعم الاصدقاء</span></p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="myFunctions.js"></script>
+
+</body>
+</html>
